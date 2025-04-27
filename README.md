@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center">
   <img src="vaultscan-logo.png" alt="VaultScan Logo" width="300"/>
 </p>
@@ -109,3 +110,7 @@ Developed by **Pavan Gajjala**
 > This is the **VaultScan – Community Edition (Prototype)** built for learning, personal branding, and open-source contribution.  
 >  
 > **Advanced Private Enterprise Version** is under development for future commercialization.
+=======
+# vaultscan-prototype
+Privacy-first secret leak detection tool for DevOps and security teams. Built for scalable, offline-first scanning with future enterprise expansion plans.
+>>>>>>> bfe6e8fe930ed0024a571f5b1a31f320f9b9628e
