@@ -1,8 +1,9 @@
+# VaultScan – Community Edition (v1.1)
+
 <p align="center">
   <img src="vaultscan-logo.png" alt="VaultScan Logo" width="300"/>
 </p>
 
-# VaultScan – Community Edition
 
 ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
@@ -15,6 +16,16 @@
 Designed for DevOps, Cloud Security, and Development teams to **prevent accidental secret exposures** before they become million-dollar breaches.
 
 Built for local, offline-first scanning with modular design for future cloud expansion.
+
+---
+
+## ✨ What's New in v1.1
+
+- Full directory recursive scanning.
+- Smart file filtering (`.py`, `.js`, `.yaml`, `.tf`, etc.).
+- Secret detection inside real code, not just dummy files.
+- Beautiful Rich CLI output.
+- Modular, future-ready codebase.
 
 ---
 
@@ -76,6 +87,7 @@ Create a `.vaultscanignore` in your repo root to skip scanning certain files or 
 
 ```
 node_modules/
+tests/
 *.jpg
 *.png
 *.pdf
@@ -108,9 +120,10 @@ Developed by **Pavan Gajjala**
 
 # 📢 DISCLAIMER
 
-> This is the **VaultScan – Community Edition (Prototype)** built for learning, personal branding, and open-source contribution.  
+> This is the **VaultScan – Community Edition (v1.1)** built for public open-source contribution, personal learning, and DevOps community support.  
 >  
-> **Advanced Private Enterprise Version** is under development for future commercialization.
+> **VaultScan Pro and Enterprise Editions** are under private development for future commercial release.
 
-# vaultscan-prototype
-Privacy-first secret leak detection tool for DevOps and security teams. Built for scalable, offline-first scanning with future enterprise expansion plans.
+# vaultscan-community
+A privacy-first secret leak detection tool for DevOps, Cloud, and Security teams.  
+Built for scalable, offline-first scanning, future-proofed for multi-cloud and enterprise environments.
