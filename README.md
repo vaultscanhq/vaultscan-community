@@ -60,13 +60,13 @@ pip install -r requirements.txt
 ## 🚀 Usage
 
 ```bash
-python -m vaultscan.main --path ./path/to/your/repo
+python -m vaultscan.main --path ./path/to/your/codebase
 ```
 
 Example:
 
 ```bash
-python -m vaultscan.main --path ./tests/dummy_repo
+python -m vaultscan.main --path ./projects/my-app
 ```
 
 ---
