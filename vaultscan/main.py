@@ -3,8 +3,8 @@
 # vaultscan/main.py
 
 import argparse
-from vaultscan.scanner import scan_repository, display_findings
-from rich.console import Console
+from .scanner import scan_repository, display_findings  # Relative import to avoid module errors
+from rich.console import Console  # For beautiful CLI output
 
 console = Console()
 
@@ -13,6 +13,7 @@ def main():
     Main entry point for VaultScan CLI.
     Parses arguments and triggers scanning.
     """
+    # Setup argument parser
     parser = argparse.ArgumentParser(
         description="VaultScan Community Edition v1.1 – Privacy-first secrets detection tool"
     )
@@ -26,6 +27,7 @@ def main():
     )
     args = parser.parse_args()
 
+    # Display banner
     console.print(f"\n[bold blue]VaultScan Community Edition v1.1[/bold blue]\n")
     console.print(f"[green]Scanning path:[/green] {args.path}\n")
 
@@ -35,5 +37,6 @@ def main():
     # Display findings
     display_findings(findings)
 
+# Standard Python entry point check
 if __name__ == "__main__":
     main()

@@ -22,7 +22,7 @@ Built for local, offline-first scanning with modular design for future cloud exp
 ## ✨ What's New in v1.1
 
 - Full directory recursive scanning.
-- Smart file filtering (`.py`, `.js`, `.yaml`, `.tf`, etc.).
+- Smart file filtering (`.py`, `.js`, `.ts`, `.yaml`, `.yml`, `.tf`, `.env`, `.sh`, `.php`, `.java`, ).
 - Secret detection inside real code, not just dummy files.
 - Beautiful Rich CLI output.
 - Modular, future-ready codebase.
@@ -45,7 +45,7 @@ Built for local, offline-first scanning with modular design for future cloud exp
 Clone the repository:
 
 ```bash
-git clone https://github.com/[your-username]/vaultscan-prototype-community-edition.git
+git clone https://github.com/pavangajjala/vaultscan-community.git
 cd vaultscan-prototype-community-edition
 ```
 
@@ -66,7 +66,7 @@ python -m vaultscan.main --path ./path/to/your/codebase
 Example:
 
 ```bash
-python -m vaultscan.main --path ./projects/my-app
+python -m vaultscan.main --path "D:/simple-java-maven-app-master"
 ```
 
 ---

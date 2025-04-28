@@ -8,15 +8,19 @@ import re
 __version__ = "1.1"
 
 # Regular expression patterns for detecting secrets
-SECRET_PATTERNS = {
-    "AWS Access Key": r'AKIA[0-9A-Z]{16}',
-    "Slack Token": r'xox[baprs]-[0-9a-zA-Z]{10,48}',
-    "Generic API Key": r'(?i)(api_key|apikey|api-key|secret)[\'"\s:=]+[0-9a-zA-Z]{16,45}',
+SECRET_PATTERNS = {    
+    "AWS Access Key": r"AKIA[0-9A-Z]{16}",
+    "AWS Secret Key": r"(?i)aws_secret_access_key[^a-zA-Z0-9]*[0-9a-zA-Z\/+]{40}",
+    "Slack Token": r"xox[baprs]-[0-9a-zA-Z]{10,48}",
+    "Stripe Secret Key": r"sk_live_[0-9a-zA-Z]{24,}",
+    "GitHub Token": r"ghp_[0-9a-zA-Z]{36}",
+    "Private Key": r"-----BEGIN PRIVATE KEY-----",
+    "Generic API Key": r"(?i)(api|apikey|token|secret)[^a-zA-Z0-9]*[0-9a-zA-Z]{16,}"
 }
 
 # File types we will scan
 ALLOWED_EXTENSIONS = (
-    '.py', '.js', '.ts', '.json', '.yaml', '.yml', '.tf', '.env', '.sh', '.php'
+    '.py', '.js', '.ts', '.json', '.yaml', '.yml', '.tf', '.env', '.sh', '.php', '.java'
 )
 
 def find_secrets_in_line(line):
