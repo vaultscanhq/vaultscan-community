@@ -106,7 +106,7 @@ Developed by **Pavan Gajjala**
 
 ---
 
-# 📢 Note
+# 📢 DISCLAIMER
 
 > This is the **VaultScan – Community Edition (Prototype)** built for learning, personal branding, and open-source contribution.  
 >  
