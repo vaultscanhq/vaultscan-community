@@ -1,0 +1,38 @@
+# Name of the workflow (appears in GitHub Actions tab)
+name: VaultScan Secrets Detection
+
+# Triggers: when someone pushes or opens a pull request to 'main' branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  vaultscan:
+    name: Run VaultScan on Codebase
+    runs-on: ubuntu-latest  # Use the latest Ubuntu GitHub-hosted runner
+
+    steps:
+      # Step 1: Checkout the repository's code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Setup Python 3.11 environment
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      # Step 3: Install required Python dependencies
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Step 4: Run VaultScan
+      - name: Run VaultScan
+        run: |
+          python -m vaultscan.main --path . --verbose
