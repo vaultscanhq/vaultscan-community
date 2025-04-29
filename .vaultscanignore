@@ -1,4 +1,18 @@
+# Ignore node_modules folder
 node_modules/
+
+# Ignore test folders
+tests/
+
+# Ignore all media/image files
 *.jpg
 *.png
-*.pdf
+*.gif
+*.mp4
+
+# Ignore markdown/readme/docs
+*.md
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
