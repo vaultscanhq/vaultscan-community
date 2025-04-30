@@ -3,40 +3,56 @@
 # vaultscan/main.py
 
 import argparse
-from .scanner import scan_repository, display_findings  # Relative import to avoid module errors
-from rich.console import Console  # For beautiful CLI output
-
-console = Console()
+import os
+from vaultscan.scanner import scan_repository, display_findings
 
 def main():
-    """
-    Main entry point for VaultScan CLI.
-    Parses arguments and triggers scanning.
-    """
-    # Setup argument parser
+    # Setup CLI argument parser
     parser = argparse.ArgumentParser(
-        description="VaultScan Community Edition v1.1 – Privacy-first secrets detection tool"
+        description="VaultScan – Secrets Detection Tool for DevOps and Security Teams"
     )
+
+    # Optional path argument (defaults to current directory)
     parser.add_argument(
-        "--path", required=True,
-        help="Path to the code repository or folder to scan"
+        "--path",
+        type=str,
+        default=".",
+        help="Path to scan (default: current directory)"
     )
+
+    # Verbose flag for extra output
     parser.add_argument(
-        "--verbose", action="store_true",
-        help="Enable verbose mode for detailed scanning logs"
+        "--verbose",
+        action="store_true",
+        help="Enable verbose output"
     )
+
+    # Help flag is built-in, just included here for visibility
+    parser.add_argument(
+        "--help",
+        action="help",
+        help="Show this help message and exit"
+    )
+
+    # Parse arguments
     args = parser.parse_args()
 
-    # Display banner
-    console.print(f"\n[bold blue]VaultScan Community Edition v1.1[/bold blue]\n")
-    console.print(f"[green]Scanning path:[/green] {args.path}\n")
+    # Validate path existence
+    if not os.path.exists(args.path):
+        print(f"Error: Path '{args.path}' does not exist.")
+        exit(1)
 
-    # Perform scanning
-    findings = scan_repository(args.path, verbose=args.verbose)
+    # Validate it's a directory
+    if not os.path.isdir(args.path):
+        print(f"Error: Path '{args.path}' is not a directory.")
+        exit(1)
 
-    # Display findings
-    display_findings(findings)
+    try:
+        # Run VaultScan and show results
+        display_findings(scan_repository(args.path), args.verbose)
+    except Exception as e:
+        print(f"Unexpected error: {str(e)}")
+        exit(1)
 
-# Standard Python entry point check
 if __name__ == "__main__":
     main()
