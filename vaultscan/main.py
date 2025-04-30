@@ -27,7 +27,7 @@ def main():
         help="Enable verbose output"
     )
 
-    # Parse arguments
+    # Parse arguments from the command line
     args = parser.parse_args()
 
     # Validate path existence
@@ -35,14 +35,18 @@ def main():
         print(f"Error: Path '{args.path}' does not exist.")
         exit(1)
 
-    # Validate it's a directory
+    # Validate that it's a directory
     if not os.path.isdir(args.path):
         print(f"Error: Path '{args.path}' is not a directory.")
         exit(1)
 
     try:
-        # Run VaultScan and show results
-        display_findings(scan_repository(args.path), args.verbose)
+        # Run VaultScan with verbose control and collect results
+        findings = scan_repository(args.path, args.verbose)
+
+        # Display results (findings only, verbose handled inside scan_repository)
+        display_findings(findings)
+
     except Exception as e:
         print(f"Unexpected error: {str(e)}")
         exit(1)
