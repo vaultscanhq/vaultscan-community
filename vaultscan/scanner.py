@@ -1,6 +1,5 @@
-# VaultScan Community Edition - Developed by PAVAN GAJJALA
-
 # vaultscan/scanner.py
+# VaultScan Community Edition - Developed by PAVAN GAJJALA
 
 import os
 from rich.console import Console
@@ -12,6 +11,7 @@ console = Console()
 def load_ignore_patterns(base_path):
     """
     Load ignore patterns from .vaultscanignore file if present.
+    Returns a list of patterns.
     """
     ignore_file = os.path.join(base_path, ".vaultscanignore")
     patterns = []
@@ -25,17 +25,17 @@ def load_ignore_patterns(base_path):
 
 def is_ignored(file_path, ignore_patterns):
     """
-    Check if a file path matches any ignore pattern.
-    Supports wildcards and folder ignoring.
+    Check if a given file path matches any ignore pattern.
+    Supports wildcards (*) and directory ignoring (folder/).
     """
     for pattern in ignore_patterns:
-        if pattern.startswith("*"):
+        if pattern.startswith("*"):  # Wildcard extension match
             if file_path.endswith(pattern[1:]):
                 return True
-        elif pattern.endswith("/"):
+        elif pattern.endswith("/"):  # Folder ignore
             if f"/{pattern[:-1]}/" in file_path.replace("\\", "/"):
                 return True
-        else:
+        else:  # Partial match (file or path)
             if pattern in file_path:
                 return True
     return False
@@ -43,6 +43,7 @@ def is_ignored(file_path, ignore_patterns):
 def scan_repository(base_path, verbose=False):
     """
     Recursively scan a repository or folder for secrets.
+    Returns a list of findings.
     """
     findings = []
     ignore_patterns = load_ignore_patterns(base_path)
@@ -52,20 +53,20 @@ def scan_repository(base_path, verbose=False):
             full_path = os.path.join(root, file)
             rel_path = os.path.relpath(full_path, base_path)
 
-            # Check if file matches ignore patterns
+            # Skip ignored files
             if is_ignored(rel_path, ignore_patterns):
                 if verbose:
                     console.print(f"[yellow]Skipping (ignored)[/yellow]: {rel_path}")
                 continue
 
-            # Only scan allowed file types
+            # Only scan files with allowed extensions
             if not file.lower().endswith(ALLOWED_EXTENSIONS):
                 continue
 
             if verbose:
                 console.print(f"[cyan]Scanning[/cyan]: {rel_path}")
 
-            # Try reading and scanning the file
+            # Try reading file line by line
             try:
                 with open(full_path, 'r', encoding='utf-8', errors='ignore') as f:
                     for i, line in enumerate(f, start=1):
@@ -83,16 +84,16 @@ def scan_repository(base_path, verbose=False):
 
     return findings
 
-def display_findings(findings):
+def display_findings(findings, verbose=False):
     """
-    Display detected secrets in a table using Rich.
+    Display detected secrets using a styled Rich table.
+    If no secrets found, show a success message.
     """
     if not findings:
         console.print("\n[bold green]No secrets found. All clear![/bold green]\n")
         return
 
     table = Table(title="Secrets Detected", show_lines=True)
-
     table.add_column("File", style="magenta")
     table.add_column("Line", style="cyan")
     table.add_column("Risk Type", style="red")
