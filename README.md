@@ -69,7 +69,9 @@ Example:
 ```bash
 python -m vaultscan.main --path "D:/simple-java-maven-app-master"
 ```
-
+---
+> **Need GitHub Actions integration?**  
+> Use the provided [scan-template.yml](.github/workflows/scan-template.yml) to get started quickly.
 ---
 
 ## 🛡️ Supported Secret Patterns (MVP)
