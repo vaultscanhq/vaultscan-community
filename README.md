@@ -1,4 +1,4 @@
-# VaultScan – Community Edition (v1.1)
+# VaultScan – Community Edition (v1.2)
 
 <p align="center">
   <img src="vaultscan-logo.png" alt="VaultScan Logo" width="300"/>
