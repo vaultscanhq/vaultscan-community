@@ -1,16 +1,23 @@
 # Changelog
 
-## [v1.1] - 2025-04-28
-
+## [v1.2] - 2025-04-30
 ### Added
-- Full recursive directory scanning
-- Smart file filtering (`.py`, `.js`, `.ts`, `.yaml`, `.yml`, `.tf`, `.env`, `.php`, `.java`, `.sh`)
-- Rich CLI output using Rich library
-- Support for `.vaultscanignore`
-- New secret patterns: AWS Access Key, Slack Token, GitHub Token, Stripe Key, Private Key, Generic API Key
+- `--verbose` flag for detailed CLI output
+- Clear logging for ignored files from `.vaultscanignore`
 
 ### Improved
-- Updated README for simpler usage
-- Added complex sample Java project for better secret detection testing
+- Refactored CLI structure for better readability
+- Polished table UI and output formatting
+
+### Fixed
+- Edge case handling in `.vaultscanignore`
+- CLI help command conflict (`--help`)
 
 ---
+
+## [v1.1] - 2025-04-28
+### Added
+- GitHub Actions support
+- Docker support for containerized usage
+- `.vaultscanignore` support
+- Initial prototype release
