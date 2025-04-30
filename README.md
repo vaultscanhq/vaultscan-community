@@ -128,3 +128,6 @@ Developed by **Pavan Gajjala**
 # vaultscan-community
 A privacy-first secret leak detection tool for DevOps, Cloud, and Security teams.  
 Built for scalable, offline-first scanning, future-proofed for multi-cloud and enterprise environments.
+
+# Developed by Pavan Gajjala – https://github.com/pavangajjala
+# Licensed under Apache 2.0. Unauthorized removal of attribution is prohibited.

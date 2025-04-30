@@ -1,5 +1,4 @@
 # VaultScan Community Edition - Developed by PAVAN GAJJALA
-
 # vaultscan/main.py
 
 import argparse
@@ -53,3 +52,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Developed by Pavan Gajjala – https://github.com/pavangajjala
+# Licensed under Apache 2.0. Unauthorized removal of attribution is prohibited.

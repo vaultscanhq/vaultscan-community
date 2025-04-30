@@ -1,3 +1,6 @@
+# VaultScan Community Edition - Developed by PAVAN GAJJALA
+# vaultscan/scanner.py
+
 import os
 from rich.console import Console
 from rich.table import Table
@@ -96,3 +99,6 @@ def display_findings(findings):
         )
 
     console.print(table)
+
+# Developed by Pavan Gajjala – https://github.com/pavangajjala
+# Licensed under Apache 2.0. Unauthorized removal of attribution is prohibited.

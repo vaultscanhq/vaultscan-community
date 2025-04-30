@@ -1,5 +1,4 @@
 # VaultScan Community Edition - Developed by PAVAN GAJJALA
-
 # vaultscan/utils.py
 
 import re
@@ -34,3 +33,6 @@ def find_secrets_in_line(line):
         for match in matches:
             findings.append((secret_type, match))
     return findings
+
+# Developed by Pavan Gajjala – https://github.com/pavangajjala
+# Licensed under Apache 2.0. Unauthorized removal of attribution is prohibited.
