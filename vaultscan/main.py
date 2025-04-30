@@ -27,13 +27,6 @@ def main():
         help="Enable verbose output"
     )
 
-    # Help flag is built-in, just included here for visibility
-    parser.add_argument(
-        "--help",
-        action="help",
-        help="Show this help message and exit"
-    )
-
     # Parse arguments
     args = parser.parse_args()
 
