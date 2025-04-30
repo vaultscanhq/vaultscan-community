@@ -19,13 +19,14 @@ Built for local, offline-first scanning with modular design for future cloud exp
 
 ---
 
-## ✨ What's New in v1.1
+## ✨ What's New in v1.2
 
-- Full directory recursive scanning.
-- Smart file filtering (`.py`, `.js`, `.ts`, `.yaml`, `.yml`, `.tf`, `.env`, `.sh`, `.php`, `.java`, ).
-- Secret detection inside real code, not just dummy files.
-- Beautiful Rich CLI output.
-- Modular, future-ready codebase.
+- Added --help support for the CLI.
+- Improved .vaultscanignore edge case handling.
+- Added verbose logging for skipped files and directories.
+- Refactored CLI code for better error messages and structure.
+- Polished CLI alignment and Rich output formatting.
+- Enhanced GitHub Actions support with workflow templates.
 
 ---
 
