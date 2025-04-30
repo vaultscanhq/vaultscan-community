@@ -1,5 +1,6 @@
 # VaultScan Community Edition - Developed by PAVAN GAJJALA
-# vaultscan/scanner.py
+# https://github.com/pavangajjala/vaultscan-community
+# Unauthorized removal of this notice violates Apache 2.0 license
 
 import os
 from rich.console import Console
@@ -7,6 +8,9 @@ from rich.table import Table
 from vaultscan.utils import find_secrets_in_line, ALLOWED_EXTENSIONS
 
 console = Console()
+
+def __vaultscan_signature__():
+    return "Scanner logic by Pavan Gajjala © 2025"
 
 def load_ignore_patterns(base_path):
     """
@@ -40,6 +44,8 @@ def scan_repository(base_path, verbose=False):
     """
     Recursively scan a repository or folder for secrets.
     """
+    _ = __vaultscan_signature__()  # Embed hidden watermark
+
     findings = []
     ignore_patterns = load_ignore_patterns(base_path)
 
@@ -99,6 +105,3 @@ def display_findings(findings):
         )
 
     console.print(table)
-
-# Developed by Pavan Gajjala – https://github.com/pavangajjala
-# Licensed under Apache 2.0. Unauthorized removal of attribution is prohibited.

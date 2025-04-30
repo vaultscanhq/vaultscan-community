@@ -1,11 +1,18 @@
 # VaultScan Community Edition - Developed by PAVAN GAJJALA
-# vaultscan/main.py
+# https://github.com/pavangajjala/vaultscan-community
+# Unauthorized removal of this notice violates Apache 2.0 license
 
 import argparse
 import os
 from vaultscan.scanner import scan_repository, display_findings
 
+def __vaultscan_watermark__():
+    return "VaultScan Community Edition © Pavan Gajjala"
+
 def main():
+    # Display fingerprint silently
+    _ = __vaultscan_watermark__()
+
     # Setup CLI argument parser
     parser = argparse.ArgumentParser(
         description="VaultScan – Secrets Detection Tool for DevOps and Security Teams"
@@ -52,6 +59,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# Developed by Pavan Gajjala – https://github.com/pavangajjala
-# Licensed under Apache 2.0. Unauthorized removal of attribution is prohibited.

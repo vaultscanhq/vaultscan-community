@@ -4,7 +4,6 @@
   <img src="vaultscan-logo.png" alt="VaultScan Logo" width="300"/>
 </p>
 
-
 ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
 ---
@@ -47,7 +46,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/pavangajjala/vaultscan-community.git
-cd vaultscan-prototype-community-edition
+cd vaultscan-community
 ```
 
 Install dependencies:
@@ -100,7 +99,8 @@ tests/
 
 ## 📜 License
 
-This project is licensed under the [Apache 2.0 License](LICENSE).
+Licnesed under the [Apache 2.0 License](LICENSE).
+Attribution required. Unauthorized removal of author credit is prohibited.
 
 ---
 
@@ -109,6 +109,9 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 Developed by **Pavan Gajjala**  
 *Focused on building privacy-first, security-focused DevOps tools.*
 
+---
+## 🚨 Report Misuse
+If you find VaultScan being copied or misused without attribution, please report it here: [GitHub Issues](https://github.com/pavangajjala/vaultscan-community/issues)
 ---
 
 ## 🛠️ Future Roadmap (Private Advanced Version)
@@ -123,7 +126,7 @@ Developed by **Pavan Gajjala**
 
 # 📢 DISCLAIMER
 
-> This is the **VaultScan – Community Edition (v1.1)** built for public open-source contribution, personal learning, and DevOps community support.  
+> This is the **VaultScan – Community Edition (v1.2)** built for open-source collaboration, personal learning, and DevOps community support.  
 >  
 > **VaultScan Pro and Enterprise Editions** are under private development for future commercial release.
 
@@ -131,4 +134,4 @@ Developed by **Pavan Gajjala**
 A privacy-first secret leak detection tool for DevOps, Cloud, and Security teams.  
 Built for scalable, offline-first scanning, future-proofed for multi-cloud and enterprise environments.
 
-**Developed by [Pavan Gajjala](https://github.com/pavangajjala) - Licensed under Apache 2.0. Unauthorized removal of attribution is prohibited.**
+**© 2024 [Pavan Gajjala](https://github.com/pavangajjala) - All rights reserved**
