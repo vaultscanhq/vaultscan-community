@@ -6,6 +6,8 @@
 
 ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
 
+> ⭐ Star / 👀 Watch / 🍴 Fork this project if you find it useful!
+
 ---
 
 ## 🚀 About VaultScan
@@ -38,6 +40,17 @@ Built for local, offline-first scanning with modular design for future cloud exp
 - 📂 Supports ignore patterns via `.vaultscanignore`.
 - 🛡️ Risk scoring for better secret prioritization.
 
+---
+## 📸 Screenshots
+
+### 🖥️ CLI Output
+![CLI Output](.github/assets/cli-output.png)
+
+### ⚙️ GitHub Action Logs
+![GitHub Action](.github/assets/github-action.png)
+
+### 🛒 GitHub Marketplace Listing
+![Marketplace](.github/assets/marketplace.png)
 ---
 
 ## 🛠️ Installation
@@ -108,6 +121,11 @@ Attribution required. Unauthorized removal of author credit is prohibited.
 
 Developed by **Pavan Gajjala**  
 *Focused on building privacy-first, security-focused DevOps tools.*
+---
+
+## 🤝 Community Contributions
+
+This is a community edition. Contributions, suggestions, and improvements are welcome!
 
 ---
 ## 🚨 Report Misuse
