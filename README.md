@@ -117,8 +117,6 @@ Attribution required. Unauthorized removal of author credit is prohibited.
 
 ---
 
----
-
 ## 🚀 Coming Soon: VaultScan Pro
 
 *VaultScan Pro is the upcoming advanced edition built for teams and enterprises.*
