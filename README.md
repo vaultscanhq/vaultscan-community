@@ -117,10 +117,21 @@ Attribution required. Unauthorized removal of author credit is prohibited.
 
 ---
 
-## ✍️ Author
+---
 
-Developed by **Pavan Gajjala**  
-*Focused on building privacy-first, security-focused DevOps tools.*
+## 🚀 Coming Soon: VaultScan Pro
+
+*VaultScan Pro is the upcoming advanced edition built for teams and enterprises.*
+
+**🔐 Highlights:**
+- Team-based scan reports
+- GitHub org-wide secret scanning
+- REST API for dashboards
+- Custom ruleset engine
+- Web dashboard (in progress)
+
+📬 [**Join the Pro Waitlist**](https://docs.google.com/forms/d/e/1FAIpQLSdKnjmm-qyHQoqp6gFu7k0wkNJ1Nt1DIx4BVMYxyWSfWLJWVQ/viewform?usp=header)
+
 ---
 
 ## 🤝 Community Contributions
@@ -128,25 +139,24 @@ Developed by **Pavan Gajjala**
 This is a community edition. Contributions, suggestions, and improvements are welcome!
 
 ---
-## 🚨 Report Misuse
-If you find VaultScan being copied or misused without attribution, please report it here: [GitHub Issues](https://github.com/pavangajjala/vaultscan-community/issues)
+
+## 📜 License
+
+Licensed under the [Apache 2.0 License](LICENSE).  
+Attribution required. Unauthorized removal of author credit is prohibited.
+
 ---
 
-## 🚀 Coming Soon: VaultScan Pro
+## ✍️ Author
 
-VaultScan Pro is the next-gen secret scanning suite designed for DevOps and security teams.
+Developed by **Pavan Gajjala**  
+*Focused on building privacy-first, security-focused DevOps tools.*
 
-### 🔐 Planned Features:
-- Team-based scan reports
-- GitHub Org-wide secret scanning
-- REST API access for CI/CD dashboards
-- Custom ruleset engine & false positive filters
-- Web dashboard and alert integrations (Slack, Email)
+---
 
-> 💡 100% offline. Privacy-first. CI-ready.
+## 🚨 Report Misuse
 
-👉 **[Join the Pro Waitlist](https://docs.google.com/forms/d/e/1FAIpQLSdKnjmm-qyHQoqp6gFu7k0wkNJ1Nt1DIx4BVMYxyWSfWLJWVQ/viewform?usp=header)**  
-Be the first to try VaultScan Pro and shape its roadmap.
+If you find VaultScan being copied or misused without attribution, please report it here: [GitHub Issues](https://github.com/pavangajjala/vaultscan-community/issues)
 
 ---
 
