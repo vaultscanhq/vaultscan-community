@@ -132,6 +132,24 @@ This is a community edition. Contributions, suggestions, and improvements are we
 If you find VaultScan being copied or misused without attribution, please report it here: [GitHub Issues](https://github.com/pavangajjala/vaultscan-community/issues)
 ---
 
+## 🚀 Coming Soon: VaultScan Pro
+
+VaultScan Pro is the next-gen secret scanning suite designed for DevOps and security teams.
+
+### 🔐 Planned Features:
+- Team-based scan reports
+- GitHub Org-wide secret scanning
+- REST API access for CI/CD dashboards
+- Custom ruleset engine & false positive filters
+- Web dashboard and alert integrations (Slack, Email)
+
+> 💡 100% offline. Privacy-first. CI-ready.
+
+👉 **[Join the Pro Waitlist](https://docs.google.com/forms/d/e/1FAIpQLSdKnjmm-qyHQoqp6gFu7k0wkNJ1Nt1DIx4BVMYxyWSfWLJWVQ/viewform?usp=header)**  
+Be the first to try VaultScan Pro and shape its roadmap.
+
+---
+
 ## 🛠️ Future Roadmap (Private Advanced Version)
 
 - GitHub/GitLab/Bitbucket API integrations
