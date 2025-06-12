@@ -103,7 +103,7 @@ vaultscan:
   script:
     - cd vaultscan-community
     - python -m vaultscan.main --path ../ --verbose
-
+```
 ---
 
 ## 🛡️ Supported Secret Patterns (MVP)
