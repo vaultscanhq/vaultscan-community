@@ -198,4 +198,4 @@ If you find VaultScan being copied or misused without attribution, please report
 A privacy-first secret leak detection tool for DevOps, Cloud, and Security teams.  
 Built for scalable, offline-first scanning, future-proofed for multi-cloud and enterprise environments.
 
-**© 2024 [Pavan Gajjala](https://github.com/pavangajjala) - All rights reserved**
+**© 2025 [Pavan Gajjala](https://github.com/pavangajjala) - All rights reserved**
