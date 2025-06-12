@@ -86,6 +86,26 @@ python -m vaultscan.main --path "D:/simple-java-maven-app-master"
 > Use the provided [scan-template.yml](.github/workflows/scan-template.yml) to get started quickly.
 ---
 
+## 🧪 GitLab CI/CD Integration
+
+To use VaultScan in GitLab CI/CD pipelines, add the following to your `.gitlab-ci.yml`:
+
+```yaml
+stages:
+  - scan
+
+vaultscan:
+  stage: scan
+  image: python:3.11
+  before_script:
+    - pip install rich
+    - git clone https://github.com/pavangajjala/vaultscan-community.git
+  script:
+    - cd vaultscan-community
+    - python -m vaultscan.main --path ../ --verbose
+
+---
+
 ## 🛡️ Supported Secret Patterns (MVP)
 
 - AWS Access Keys
