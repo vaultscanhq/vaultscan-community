@@ -10,6 +10,10 @@
 
 ---
 
+👉 Try VaultScan now → [vaultscanhq/vaultscan-community](https://github.com/vaultscanhq/vaultscan-community)
+
+---
+
 ## 🚀 About VaultScan
 
 **VaultScan** is a fast, lightweight, privacy-first secrets and credential leak detection tool for code repositories.
@@ -53,12 +57,19 @@ Built for local, offline-first scanning with modular design for future cloud exp
 ![Marketplace](.github/assets/marketplace.png)
 ---
 
+## 🔗 Integrations
+
+- 🔧 GitHub Action: [vaultscanhq/vaultscan-action](https://github.com/vaultscanhq/vaultscan-action)  
+- 🛒 Marketplace: [VaultScan GitHub Action](https://github.com/marketplace/actions/vaultscan-action)
+
+---
+
 ## 🛠️ Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/pavangajjala/vaultscan-community.git
+git clone https://github.com/vaultscanhq/vaultscan-community.git
 cd vaultscan-community
 ```
 
@@ -99,7 +110,7 @@ vaultscan:
   image: python:3.11
   before_script:
     - pip install rich
-    - git clone https://github.com/pavangajjala/vaultscan-community.git
+    - git clone https://github.com/vaultscanhq/vaultscan-community.git
   script:
     - cd vaultscan-community
     - python -m vaultscan.main --path ../ --verbose
@@ -127,13 +138,6 @@ tests/
 *.png
 *.pdf
 ```
-
----
-
-## 📜 License
-
-Licnesed under the [Apache 2.0 License](LICENSE).
-Attribution required. Unauthorized removal of author credit is prohibited.
 
 ---
 
@@ -166,6 +170,7 @@ Attribution required. Unauthorized removal of author credit is prohibited.
 ---
 
 ## ✍️ Author
+Maintained under: [vaultscanhq](https://github.com/vaultscanhq)
 
 Developed by **Pavan Gajjala**  
 *Focused on building privacy-first, security-focused DevOps tools.*
@@ -174,7 +179,7 @@ Developed by **Pavan Gajjala**
 
 ## 🚨 Report Misuse
 
-If you find VaultScan being copied or misused without attribution, please report it here: [GitHub Issues](https://github.com/pavangajjala/vaultscan-community/issues)
+If you find VaultScan being copied or misused without attribution, please report it here: [GitHub Issues](https://github.com/vaultscanhq/vaultscan-community/issues)
 
 ---
 
@@ -194,8 +199,11 @@ If you find VaultScan being copied or misused without attribution, please report
 >  
 > **VaultScan Pro and Enterprise Editions** are under private development for future commercial release.
 
-# vaultscan-community
-A privacy-first secret leak detection tool for DevOps, Cloud, and Security teams.  
+---
+
+## 📦 Project Summary
+
+**vaultscan-community** is a privacy-first secret leak detection tool for DevOps, Cloud, and Security teams.  
 Built for scalable, offline-first scanning, future-proofed for multi-cloud and enterprise environments.
 
 **© 2025 [Pavan Gajjala](https://github.com/pavangajjala) - All rights reserved**
