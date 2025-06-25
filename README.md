@@ -57,6 +57,8 @@ Built for local, offline-first scanning with modular design for future cloud exp
 ![Marketplace](.github/assets/marketplace.png)
 ---
 
+---
+
 ## 🔗 Integrations
 
 - 🔧 GitHub Action: [vaultscanhq/vaultscan-action](https://github.com/vaultscanhq/vaultscan-action)  
