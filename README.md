@@ -165,14 +165,11 @@ tests/
 
 **🔐 Highlights:**
 - Team-based scan reports
-- GitHub org-wide secret scanning
 - REST API for dashboards
 - Web dashboard (in progress)
 - Custom ruleset engine
 - Slack, Jira, Email alert integrations
 - Obfuscated & base64 secret detection
-- Role-based access control (RBAC)
-- Compliance audit logs
 - Severity scoring in CI/CD
 - Multi-language support (Java, Python, JS)
 
@@ -206,24 +203,31 @@ Developed by **Pavan Gajjala**
 If you find VaultScan being copied or misused without attribution, please report it here: [GitHub Issues](https://github.com/vaultscanhq/vaultscan-community/issues)
 
 ---
+## VaultScan Pro Roadmap
 
-## 🛠️ Future Roadmap (Private Advanced Version)
+- Cloud dashboard with scheduling
+- Automated Slack, Jira, Email alerts
+- Custom ruleset engine
+- REST API for dashboards & integrations
+- Obfuscated & base64 secret detection
+- Severity scoring in CI/CD
+- Multi-language support (Java, Python, JS, etc.)
+- Visual dashboard (initial version)
+- IDE plugin support (VS Code, JetBrains)
 
-- 🔗 GitHub/GitLab/Bitbucket API integrations – Scan entire orgs via secure token-based access.
-- ☁️ AWS/GCP/Kubernetes secret scanning – Detect secrets in IaC, configs, and containerized workloads.
-- 📬 Automated Slack, Jira, Email alerts – Notify teams instantly when secrets are detected.
-- 📊 Cloud dashboard with scheduling – View scan results, history, trends, and manage scans centrally.
-- 🔐 SaaS version with teams, RBAC & policy control – Role-based access and audit-ready configurations.
-- 🧪 Obfuscated & base64 secret detection – Catch secrets split, encoded, or hidden in code.
-- 🧠 AST/static analysis – Detect secrets built via code logic (e.g., string joins).
-- 🧩 Custom ruleset engine – Define and manage your own secret detection logic.
-- ⚙️ REST API for dashboards & integrations – Programmatically access scan data for automation.
-- 📋 Compliance audit logs – Track who scanned what, when, and what was found.
-- 🚦 Severity scoring in CI/CD – Classify secrets by impact for better enforcement.
-- 🎨 Visual dashboard – Web UI with filters, risk views, and export options.
-- 🧠 Multi-language support (Java, Python, JS, etc.) – Deep analysis for real-world codebases.
-- 🔧 IDE plugin support (VS Code, JetBrains) – Inline detection while coding.
+---
 
+## VaultScan Enterprise Roadmap
+
+- GitHub/GitLab/Bitbucket API integrations
+- AWS/GCP/Kubernetes secret scanning
+- SaaS version with teams, RBAC & policy control
+- AST/static analysis
+- Compliance audit logs
+- Advanced dashboard views & audit filters
+- Enterprise SSO (SAML, LDAP)
+- Centralized policy enforcement across teams
+- Full audit trail & compliance traceability
 ---
 
 # 📢 DISCLAIMER
