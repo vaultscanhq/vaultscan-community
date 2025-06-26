@@ -164,14 +164,17 @@ tests/
 *VaultScan Pro is the upcoming advanced edition built for teams and enterprises.*
 
 **🔐 Highlights:**
-- Team-based scan reports
-- REST API for dashboards
-- Web dashboard (in progress)
-- Custom ruleset engine
-- Slack, Jira, Email alert integrations
-- Obfuscated & base64 secret detection
-- Severity scoring in CI/CD
-- Multi-language support (Java, Python, JS)
+- Visual Web Dashboard
+- REST API Access
+- Team-based Scan Reports
+- GitHub Org-wide Scanning
+- Custom Ruleset Engine
+- Slack, Jira, Email Alerts
+- Scheduled Scans
+- Multi-language Support
+- Obfuscated Secret Detection
+- Severity Scoring in CI/CD
+- Exportable Reports
 
 📬 [**Join the Pro Waitlist**](https://docs.google.com/forms/d/e/1FAIpQLSdKnjmm-qyHQoqp6gFu7k0wkNJ1Nt1DIx4BVMYxyWSfWLJWVQ/viewform?usp=header)
 
