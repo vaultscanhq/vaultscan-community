@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run VaultScan via GitHub Action
-        uses: pavangajjala/vaultscan-action@v1.2
+        uses: vaultscanhq/vaultscan-action@v1.2
