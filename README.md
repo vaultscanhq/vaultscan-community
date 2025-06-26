@@ -84,7 +84,8 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
+---
+📄 [Download User Guide (v1.2)](./docs/VaultScan_User_Guide_v1.2.pdf)
 ---
 
 ## 🚀 Usage
