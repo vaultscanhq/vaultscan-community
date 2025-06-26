@@ -13,6 +13,12 @@ SECRET_PATTERNS = {
     "Slack Token": r"xox[baprs]-[0-9a-zA-Z]{10,48}",
     "Stripe Secret Key": r"sk_live_[0-9a-zA-Z]{24,}",
     "GitHub Token": r"ghp_[0-9a-zA-Z]{36}",
+    "Google API Key": r"AIza[0-9A-Za-z-_]{35}",
+    "Azure Key": r"(?i)azure.*(key|token)[\s:=]+[a-z0-9]{32,}",
+    "JWT Token": r"eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9._-]+\.[A-Za-z0-9._-]+",
+    "DB Connection String": r"(?i)(postgres|mysql|mongodb):\/\/.+:[^@]+@[^:\/]+",
+    "Basic Auth URL": r"https?:\/\/[^\/\s]+:[^\/\s]+@[^\/\s]+",
+    "Twilio Auth Token": r"(?i)twilio.*(token|auth)[\s:=]+[a-f0-9]{32}",
     "Private Key": r"-----BEGIN PRIVATE KEY-----",
     "Generic API Key": r"(?i)(api|apikey|token|secret)[^a-zA-Z0-9]*[0-9a-zA-Z]{16,}"
 }

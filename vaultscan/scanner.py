@@ -1,5 +1,5 @@
 # VaultScan Community Edition - Developed by PAVAN GAJJALA
-# https://github.com/pavangajjala/vaultscan-community
+# https://github.com/vaultscanhq/vaultscan-community
 # Unauthorized removal of this notice violates Apache 2.0 license
 
 import os
