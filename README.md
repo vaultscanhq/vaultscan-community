@@ -32,6 +32,8 @@ Built for local, offline-first scanning with modular design for future cloud exp
 - Refactored CLI code for better error messages and structure.
 - Polished CLI alignment and Rich output formatting.
 - Enhanced GitHub Actions support with workflow templates.
+- Added support for new secret patterns:  
+  GCP API Keys, Azure Keys, JWT Tokens, Database URIs, Basic Auth URLs, and Twilio Auth Tokens
 
 ---
 
@@ -43,6 +45,8 @@ Built for local, offline-first scanning with modular design for future cloud exp
 - ⚡ Lightweight and fast scanning.
 - 📂 Supports ignore patterns via `.vaultscanignore`.
 - 🛡️ Risk scoring for better secret prioritization.
+- 🧠 High-entropy secret detection (coming soon).
+- 🔎 Supports both file and directory input scanning.
 
 ---
 ## 📸 Screenshots
@@ -121,11 +125,21 @@ vaultscan:
 
 ## 🛡️ Supported Secret Patterns (MVP)
 
-- AWS Access Keys
-- Slack Tokens
+- AWS Access Keys  
+- AWS Secret Keys  
+- Slack Tokens  
+- GitHub Tokens  
+- Google Cloud API Keys  
+- Azure Keys  
+- Stripe Secret Keys  
+- Twilio Auth Tokens  
+- Private SSH Keys  
+- JWT Tokens  
+- Database Connection Strings  
+- Basic Auth in URLs  
 - Generic API Keys
 
-*(More patterns can be added easily in future versions.)*
+*(The Community Edition now supports 13+ patterns. Pro version will include even more advanced detection.)*
 
 ---
 
@@ -151,8 +165,14 @@ tests/
 - Team-based scan reports
 - GitHub org-wide secret scanning
 - REST API for dashboards
-- Custom ruleset engine
 - Web dashboard (in progress)
+- Custom ruleset engine
+- Slack, Jira, Email alert integrations
+- Obfuscated & base64 secret detection
+- Role-based access control (RBAC)
+- Compliance audit logs
+- Severity scoring in CI/CD
+- Multi-language support (Java, Python, JS)
 
 📬 [**Join the Pro Waitlist**](https://docs.google.com/forms/d/e/1FAIpQLSdKnjmm-qyHQoqp6gFu7k0wkNJ1Nt1DIx4BVMYxyWSfWLJWVQ/viewform?usp=header)
 
@@ -187,11 +207,20 @@ If you find VaultScan being copied or misused without attribution, please report
 
 ## 🛠️ Future Roadmap (Private Advanced Version)
 
-- GitHub/GitLab/Bitbucket API integrations
-- AWS/GCP/Kubernetes secret scanning
-- Automated Slack/Email alerts
-- Cloud dashboard and scheduling
-- SaaS enterprise version
+- 🔗 GitHub/GitLab/Bitbucket API integrations – Scan entire orgs via secure token-based access.
+- ☁️ AWS/GCP/Kubernetes secret scanning – Detect secrets in IaC, configs, and containerized workloads.
+- 📬 Automated Slack, Jira, Email alerts – Notify teams instantly when secrets are detected.
+- 📊 Cloud dashboard with scheduling – View scan results, history, trends, and manage scans centrally.
+- 🔐 SaaS version with teams, RBAC & policy control – Role-based access and audit-ready configurations.
+- 🧪 Obfuscated & base64 secret detection – Catch secrets split, encoded, or hidden in code.
+- 🧠 AST/static analysis – Detect secrets built via code logic (e.g., string joins).
+- 🧩 Custom ruleset engine – Define and manage your own secret detection logic.
+- ⚙️ REST API for dashboards & integrations – Programmatically access scan data for automation.
+- 📋 Compliance audit logs – Track who scanned what, when, and what was found.
+- 🚦 Severity scoring in CI/CD – Classify secrets by impact for better enforcement.
+- 🎨 Visual dashboard – Web UI with filters, risk views, and export options.
+- 🧠 Multi-language support (Java, Python, JS, etc.) – Deep analysis for real-world codebases.
+- 🔧 IDE plugin support (VS Code, JetBrains) – Inline detection while coding.
 
 ---
 
