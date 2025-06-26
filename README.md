@@ -205,29 +205,40 @@ If you find VaultScan being copied or misused without attribution, please report
 ---
 ## VaultScan Pro Roadmap
 
-- Cloud dashboard with scheduling
-- Automated Slack, Jira, Email alerts
-- Custom ruleset engine
-- REST API for dashboards & integrations
-- Obfuscated & base64 secret detection
-- Severity scoring in CI/CD
-- Multi-language support (Java, Python, JS, etc.)
-- Visual dashboard (initial version)
-- IDE plugin support (VS Code, JetBrains)
+- Visual Web Dashboard – View scans, risks, and history in one place
+- REST API Access – Integrate scan data with your own dashboards/tools
+- Team-based Scan Reports – Share and view reports by user or repo group
+- GitHub Org-wide Scanning – Scan all repositories in one go
+- Custom Ruleset Engine – Define your own regex patterns and ignore logic
+- Slack, Jira, Email Alerts – Get notified instantly when secrets are found
+- Scheduled Scans – Automate daily/weekly secret detection
+- Multi-language Support – Java, Python, JS, and more
+- Obfuscated Secret Detection – Catch base64, hex, or string-split secrets
+- Severity Scoring in CI/CD – Classify secrets by impact in pipelines
+- Exportable Reports – PDF/CSV formats for teams and audits
 
 ---
 
 ## VaultScan Enterprise Roadmap
 
-- GitHub/GitLab/Bitbucket API integrations
-- AWS/GCP/Kubernetes secret scanning
-- SaaS version with teams, RBAC & policy control
-- AST/static analysis
-- Compliance audit logs
-- Advanced dashboard views & audit filters
-- Enterprise SSO (SAML, LDAP)
-- Centralized policy enforcement across teams
-- Full audit trail & compliance traceability
+- Centralized Dashboard for Teams
+- Role-based Access Control (RBAC)
+- SAML/SSO Login Support (SAML, LDAP)
+- Audit Logs and Compliance Reports
+- On-prem Deployment (optional)
+- GitHub/GitLab/Bitbucket API Integrations
+- AWS/GCP/Kubernetes Secret Scanning
+- AST/Static Analysis for Code Logic
+- Custom Scanning Rules
+- Centralized Policy Enforcement Across Teams
+- Data Retention Controls
+- Advanced Dashboard Views & Audit Filters
+- Full Audit Trail & Compliance Traceability
+- SLA-backed Enterprise Support
+- Multi-language Support (Java, Python, JS)
+- Integration with SIEM/SOC Systems
+- IDE Plugin Support (VS Code, JetBrains)
+
 ---
 
 # 📢 DISCLAIMER
