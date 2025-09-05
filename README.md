@@ -85,7 +85,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-📄 [Download User Guide (v1.2)](./docs/VaultScan_User_Guide_v1.2.pdf)
+📄 [Download User Guide (v1.2)](./documentation/VaultScan_User_Guide_v1.2.pdf)
 
 ---
 
@@ -159,27 +159,6 @@ tests/
 
 ---
 
-## 🚀 Coming Soon: VaultScan Pro
-
-*VaultScan Pro is the upcoming advanced edition built for teams and enterprises.*
-
-**🔐 Highlights:**
-- Visual Web Dashboard
-- REST API Access
-- Team-based Scan Reports
-- GitHub Org-wide Scanning
-- Custom Ruleset Engine
-- Slack, Jira, Email Alerts
-- Scheduled Scans
-- Multi-language Support
-- Obfuscated Secret Detection
-- Severity Scoring in CI/CD
-- Exportable Reports
-
-📬 [**Join the Pro Waitlist**](https://docs.google.com/forms/d/e/1FAIpQLSdKnjmm-qyHQoqp6gFu7k0wkNJ1Nt1DIx4BVMYxyWSfWLJWVQ/viewform?usp=header)
-
----
-
 ## 🤝 Community Contributions
 
 This is a community edition. Contributions, suggestions, and improvements are welcome!
@@ -206,55 +185,10 @@ Developed by **Pavan Gajjala**
 If you find VaultScan being copied or misused without attribution, please report it here: [GitHub Issues](https://github.com/vaultscanhq/vaultscan-community/issues)
 
 ---
-## VaultScan Pro Roadmap
-
-- Visual Web Dashboard – View scans, risks, and history in one place
-- REST API Access – Integrate scan data with your own dashboards/tools
-- Team-based Scan Reports – Share and view reports by user or repo group
-- GitHub Org-wide Scanning – Scan all repositories in one go
-- Custom Ruleset Engine – Define your own regex patterns and ignore logic
-- Slack, Jira, Email Alerts – Get notified instantly when secrets are found
-- Scheduled Scans – Automate daily/weekly secret detection
-- Multi-language Support – Java, Python, JS, and more
-- Obfuscated Secret Detection – Catch base64, hex, or string-split secrets
-- Severity Scoring in CI/CD – Classify secrets by impact in pipelines
-- Exportable Reports – PDF/CSV formats for teams and audits
-
----
-
-## VaultScan Enterprise Roadmap
-
-- Centralized Dashboard for Teams
-- Role-based Access Control (RBAC)
-- SAML/SSO Login Support (SAML, LDAP)
-- Audit Logs and Compliance Reports
-- On-prem Deployment (optional)
-- GitHub/GitLab/Bitbucket API Integrations
-- AWS/GCP/Kubernetes Secret Scanning
-- AST/Static Analysis for Code Logic
-- Custom Scanning Rules
-- Centralized Policy Enforcement Across Teams
-- Data Retention Controls
-- Advanced Dashboard Views & Audit Filters
-- Full Audit Trail & Compliance Traceability
-- SLA-backed Enterprise Support
-- Multi-language Support (Java, Python, JS)
-- Integration with SIEM/SOC Systems
-- IDE Plugin Support (VS Code, JetBrains)
-
----
-
-# 📢 DISCLAIMER
-
-> This is the **VaultScan – Community Edition (v1.2)** built for open-source collaboration, personal learning, and DevOps community support.  
->  
-> **VaultScan Pro and Enterprise Editions** are under private development for future commercial release.
-
----
 
 ## 📦 Project Summary
 
 **vaultscan-community** is a privacy-first secret leak detection tool for DevOps, Cloud, and Security teams.  
 Built for scalable, offline-first scanning, future-proofed for multi-cloud and enterprise environments.
 
-**© 2025 [Pavan Gajjala](https://github.com/pavangajjala) - All rights reserved**
+**© 2025 [Pavan Gajjala](https://github.com/pavangajjala) - Licensed under the Apache License, Version 2.0.**
