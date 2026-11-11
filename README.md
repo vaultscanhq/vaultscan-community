@@ -44,7 +44,7 @@ docker build -t vaultscan .
 docker run --rm -v "$PWD:/repo" vaultscan gate --path /repo
 ```
 
-Python 3.9 or newer is required.
+Python 3.11 or newer is required.
 
 ## Usage
 

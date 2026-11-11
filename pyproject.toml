@@ -7,7 +7,7 @@ name = "vaultscan"
 version = "2.0.0"
 description = "Change gate for infrastructure: reviews Terraform plans, Kubernetes manifests, CI workflows and secrets before they ship."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Pavan Gajjala" }]
 dependencies = ["rich>=13", "PyYAML>=6"]
