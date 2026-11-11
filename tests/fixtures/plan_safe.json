@@ -1,0 +1,13 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.9.5",
+  "resource_changes": [
+    {"address": "aws_cloudwatch_log_group.app", "type": "aws_cloudwatch_log_group",
+     "change": {"actions": ["create"], "before": null, "after": {"name": "/app/api", "retention_in_days": 30}}},
+    {"address": "aws_security_group.alb", "type": "aws_security_group",
+     "change": {"actions": ["create"], "before": null,
+       "after": {"ingress": [{"from_port": 443, "to_port": 443, "protocol": "tcp", "cidr_blocks": ["0.0.0.0/0"]}]}}},
+    {"address": "aws_s3_bucket.logs", "type": "aws_s3_bucket",
+     "change": {"actions": ["no-op"], "before": {"bucket": "logs"}, "after": {"bucket": "logs"}}}
+  ]
+}
