@@ -55,6 +55,9 @@ class Finding:
     @property
     def location(self) -> str:
         if self.resource:
+            # A job path or a Deployment name is ambiguous without its file.
+            if self.file and self.source in ("workflow", "kubernetes"):
+                return f"{self.file} ({self.resource})"
             return self.resource
         if self.file and self.line:
             return f"{self.file}:{self.line}"

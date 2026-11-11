@@ -1,17 +1,15 @@
-# Use official lightweight Python image
-FROM python:3.11-slim
+FROM python:3.12-slim
 
-# Set working directory
-WORKDIR /app
+LABEL org.opencontainers.image.source="https://github.com/vaultscanhq/vaultscan-community" \
+      org.opencontainers.image.licenses="Apache-2.0" \
+      org.opencontainers.image.authors="Pavan Gajjala"
 
-# Copy project files
-COPY . .
+WORKDIR /opt/vaultscan
+COPY pyproject.toml README.md LICENSE ./
+COPY vaultscan ./vaultscan
+RUN pip install --no-cache-dir . && useradd --create-home --uid 10001 scanner
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Run VaultScan CLI
-ENTRYPOINT ["python", "-m", "vaultscan.main"]
-
-# Developed by Pavan Gajjala – https://github.com/pavangajjala
-# Licensed under Apache 2.0. Unauthorized removal of attribution is prohibited.
+USER scanner
+WORKDIR /repo
+ENTRYPOINT ["vaultscan"]
+CMD ["gate", "--path", "/repo"]

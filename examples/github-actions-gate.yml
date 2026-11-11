@@ -1,0 +1,55 @@
+# Gate every pull request that touches infrastructure.
+# Copy to .github/workflows/vaultscan.yml and adjust the Terraform directory.
+name: VaultScan gate
+
+on:
+  pull_request:
+    paths: ["infra/**", "deploy/**", ".github/workflows/**"]
+
+permissions:
+  contents: read
+  id-token: write          # OIDC to AWS for a read-only plan role
+  security-events: write   # upload SARIF to code scanning
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install VaultScan
+        run: pip install git+https://github.com/vaultscanhq/vaultscan-community.git
+
+      - uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4.0.2
+        with:
+          role-to-assume: ${{ vars.PLAN_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
+        with:
+          terraform_wrapper: false
+
+      - name: Terraform plan
+        working-directory: infra
+        run: |
+          terraform init -input=false
+          terraform plan -input=false -out tfplan
+          terraform show -json tfplan > "$GITHUB_WORKSPACE/plan.json"
+
+      - name: Gate the change
+        run: |
+          vaultscan gate --path . --plan plan.json --manifests deploy/ \
+            --format markdown --output "$GITHUB_STEP_SUMMARY"
+
+      - name: Export SARIF
+        if: always()
+        run: vaultscan gate --path . --plan plan.json --manifests deploy/ --format sarif --output vaultscan.sarif || true
+
+      - uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: vaultscan.sarif
