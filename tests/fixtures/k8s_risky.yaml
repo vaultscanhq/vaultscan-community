@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-shipper
+  namespace: platform
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: log-shipper}
+  template:
+    metadata:
+      labels: {app: log-shipper}
+    spec:
+      hostNetwork: true
+      containers:
+        - name: shipper
+          image: fluent/fluent-bit:latest
+          securityContext:
+            privileged: true
+            capabilities:
+              add: ["SYS_ADMIN"]
+          volumeMounts:
+            - {name: docker, mountPath: /var/run/docker.sock}
+      volumes:
+        - name: docker
+          hostPath: {path: /var/run/docker.sock}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: ci-admin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: ci
+    namespace: ci
