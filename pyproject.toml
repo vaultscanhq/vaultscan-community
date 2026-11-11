@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vaultscan"
+version = "2.0.0"
+description = "Change gate for infrastructure: reviews Terraform plans, Kubernetes manifests, CI workflows and secrets before they ship."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Pavan Gajjala" }]
+dependencies = ["rich>=13", "PyYAML>=6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+vaultscan = "vaultscan.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/vaultscanhq/vaultscan-community"
+
+[tool.setuptools.packages.find]
+include = ["vaultscan*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

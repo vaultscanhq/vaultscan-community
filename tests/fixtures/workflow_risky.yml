@@ -1,0 +1,17 @@
+name: PR checks
+on:
+  pull_request_target:
+    types: [opened, synchronize]
+permissions: write-all
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: some-org/setup-thing@v2
+      - name: Greet
+        run: echo "Testing ${{ github.event.pull_request.title }}"
+      - name: Install tool
+        run: curl -sSL https://get.example.com/install.sh | bash

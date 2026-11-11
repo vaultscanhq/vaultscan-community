@@ -1,1 +1,2 @@
-rich
+rich>=13
+PyYAML>=6

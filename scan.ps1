@@ -10,4 +10,4 @@ if ([string]::IsNullOrWhiteSpace($path)) {
 Write-Host "`n Scanning path: $path`n"
 
 # Run VaultScan CLI tool
-python -m vaultscan.main --path $path --verbose
+python -m vaultscan secrets --path $path --verbose

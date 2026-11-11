@@ -1,0 +1,10 @@
+# Example policy. Copy to .vaultscan.yml in the repository root.
+block_on: critical
+warn_on: medium
+max_deletes: 5
+
+ignore_rules:
+  - K8S-006        # memory limits are enforced by a LimitRange in our clusters
+
+severity_overrides:
+  TF-009: high     # unencrypted storage is not acceptable for us

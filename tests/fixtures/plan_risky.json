@@ -1,0 +1,22 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.9.5",
+  "resource_changes": [
+    {"address": "aws_db_instance.orders", "type": "aws_db_instance",
+     "change": {"actions": ["delete"], "before": {"identifier": "orders-prod"}, "after": null}},
+    {"address": "aws_dynamodb_table.sessions", "type": "aws_dynamodb_table",
+     "change": {"actions": ["delete", "create"], "before": {"name": "sessions"}, "after": {"name": "sessions-v2"}}},
+    {"address": "aws_security_group.bastion", "type": "aws_security_group",
+     "change": {"actions": ["update"], "before": {"ingress": []},
+       "after": {"ingress": [{"from_port": 22, "to_port": 22, "protocol": "tcp", "cidr_blocks": ["0.0.0.0/0"]}]}}},
+    {"address": "aws_iam_policy.deploy", "type": "aws_iam_policy",
+     "change": {"actions": ["create"], "before": null,
+       "after": {"policy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"*\",\"Resource\":\"*\"}]}"}}},
+    {"address": "aws_db_instance.reports", "type": "aws_db_instance",
+     "change": {"actions": ["update"], "before": {"deletion_protection": true, "storage_encrypted": true},
+       "after": {"deletion_protection": false, "storage_encrypted": true, "publicly_accessible": true}}},
+    {"address": "aws_s3_bucket_public_access_block.assets", "type": "aws_s3_bucket_public_access_block",
+     "change": {"actions": ["update"], "before": {"block_public_acls": true},
+       "after": {"block_public_acls": false, "block_public_policy": true, "ignore_public_acls": true, "restrict_public_buckets": true}}}
+  ]
+}
